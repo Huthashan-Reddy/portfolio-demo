@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Project - Complete Documentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: white;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 8px;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        h2 {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+            margin: 30px 0 20px 0;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #764ba2;
+            margin: 20px 0 10px 0;
+            font-size: 1.3em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            border-radius: 4px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            background: white;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:hover {
+            background: #f5f5f5;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .tech-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .tech-item strong {
+            color: #667eea;
+        }
+        
+        ul {
+            margin: 10px 0 10px 20px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .feature-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border-left: 4px solid #764ba2;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        
+        .feature-item strong {
+            color: #764ba2;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 4px;
+            margin: 15px 0;
+            border-left: 4px solid #ffc107;
+        }
+        
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .metric {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .metric-value {
+            font-size: 2em;
+            color: #667eea;
+            font-weight: bold;
+        }
+        
+        .metric-label {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 5px;
+        }
+        
+        .page-break {
+            page-break-after: always;
+            margin: 40px 0;
+            border-top: 2px solid #ddd;
+            padding-top: 20px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: #999;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .container {
+                max-width: 100%;
+            }
+            .page-break {
+                page-break-after: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aarav Sharma Student Portfolio</h1>
+            <p class="subtitle">Interactive React + TypeScript Web Application</p>
+        </header>
+
+        <!-- Overview Section -->
+        <h2>📋 Project Overview</h2>
+        <div class="section">
+            <p>A modern, fully responsive student portfolio website showcasing academics, projects, skills, certifications, and testimonials. Built with React 19, TypeScript, and Vite, featuring advanced animations powered by GSAP, Three.js, and interactive 3D elements.</p>
+            
+            <h3>Project Goal</h3>
+            <p>Create an engaging, visually stunning personal portfolio that demonstrates technical expertise through a combination of modern web technologies, complex animations, and interactive user experiences.</p>
+        </div>
+
+        <!-- Tech Stack -->
+        <h2>⚙️ Technology Stack</h2>
+        
+        <h3>Core Framework & Build</h3>
+        <div class="tech-stack">
+            <div class="tech-item">
+                <strong>React 19.1.0</strong><br>
+                Modern UI framework with latest features
+            </div>
+            <div class="tech-item">
+                <strong>TypeScript 5.8.0</strong><br>
+                Type safety and better developer experience
+            </div>
+            <div class="tech-item">
+                <strong>Vite 6.3.0</strong><br>
+                Lightning-fast build tool with HMR
+            </div>
+            <div class="tech-item">
+                <strong>React DOM 19.1.0</strong><br>
+                DOM rendering library for React
+            </div>
+        </div>
+
+        <h3>Styling & Design</h3>
+        <div class="tech-stack">
+            <div class="tech-item">
+                <strong>Tailwind CSS 4.1.0</strong><br>
+                Utility-first CSS framework
+            </div>
+            <div class="tech-item">
+                <strong>PostCSS 8.x</strong><br>
+                CSS processing and optimization
+            </div>
+            <div class="tech-item">
+                <strong>Radix UI</strong><br>
+                Accessible, unstyled UI components
+            </div>
+            <div class="tech-item">
+                <strong>Shadcn/ui</strong><br>
+                Copy-paste component library
+            </div>
+        </div>
+
+        <h3>Animation & 3D Graphics</h3>
+        <div class="tech-stack">
+            <div class="tech-item">
+                <strong>GSAP 3.13.0</strong><br>
+                Professional animation library with ScrollTrigger
+            </div>
+            <div class="tech-item">
+                <strong>Three.js 0.175.0</strong><br>
+                3D graphics engine
+            </div>
+            <div class="tech-item">
+                <strong>@react-three/fiber 9.1.0</strong><br>
+                React renderer for Three.js
+            </div>
+            <div class="tech-item">
+                <strong>@react-three/drei 10.0.0</strong><br>
+                R3F helpers and utilities
+            </div>
+        </div>
+
+        <h3>Physics & Interactions</h3>
+        <div class="tech-stack">
+            <div class="tech-item">
+                <strong>@react-three/cannon 6.6.0</strong><br>
+                Physics engine for 3D simulations
+            </div>
+            <div class="tech-item">
+                <strong>Lenis 1.3.0</strong><br>
+                Smooth scrolling library
+            </div>
+            <div class="tech-item">
+                <strong>Lucide React 0.510.0</strong><br>
+                Beautiful icon library
+            </div>
+            <div class="tech-item">
+                <strong>@gsap/react 2.1.2</strong><br>
+                React bindings for GSAP
+            </div>
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Dependencies Table -->
+        <h2>📦 Dependencies Summary</h2>
+        
+        <h3>Runtime Dependencies</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Version</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>react</td>
+                    <td>^19.1.0</td>
+                    <td>UI framework</td>
+                </tr>
+                <tr>
+                    <td>react-dom</td>
+                    <td>^19.1.0</td>
+                    <td>React DOM renderer</td>
+                </tr>
+                <tr>
+                    <td>three</td>
+                    <td>^0.175.0</td>
+                    <td>3D graphics engine</td>
+                </tr>
+                <tr>
+                    <td>@react-three/fiber</td>
+                    <td>^9.1.0</td>
+                    <td>React Three.js renderer</td>
+                </tr>
+                <tr>
+                    <td>@react-three/drei</td>
+                    <td>^10.0.0</td>
+                    <td>R3F helpers and utilities</td>
+                </tr>
+                <tr>
+                    <td>@react-three/cannon</td>
+                    <td>^6.6.0</td>
+                    <td>Physics engine bindings</td>
+                </tr>
+                <tr>
+                    <td>gsap</td>
+                    <td>^3.13.0</td>
+                    <td>Animation engine</td>
+                </tr>
+                <tr>
+                    <td>lenis</td>
+                    <td>^1.3.0</td>
+                    <td>Smooth scrolling</td>
+                </tr>
+                <tr>
+                    <td>lucide-react</td>
+                    <td>^0.510.0</td>
+                    <td>Icon library</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Development Dependencies</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Package</th>
+                    <th>Version</th>
+                    <th>Purpose</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>typescript</td>
+                    <td>^5.8.0</td>
+                    <td>Type safety</td>
+                </tr>
+                <tr>
+                    <td>vite</td>
+                    <td>^6.3.0</td>
+                    <td>Build tool and dev server</td>
+                </tr>
+                <tr>
+                    <td>@vitejs/plugin-react</td>
+                    <td>^4.5.0</td>
+                    <td>React Fast Refresh for Vite</td>
+                </tr>
+                <tr>
+                    <td>tailwindcss</td>
+                    <td>^4.1.0</td>
+                    <td>CSS utility framework</td>
+                </tr>
+                <tr>
+                    <td>@tailwindcss/vite</td>
+                    <td>^4.1.0</td>
+                    <td>Tailwind Vite integration</td>
+                </tr>
+                <tr>
+                    <td>@types/react</td>
+                    <td>^19.1.0</td>
+                    <td>React type definitions</td>
+                </tr>
+                <tr>
+                    <td>@types/react-dom</td>
+                    <td>^19.1.0</td>
+                    <td>ReactDOM type definitions</td>
+                </tr>
+                <tr>
+                    <td>@types/three</td>
+                    <td>^0.175.0</td>
+                    <td>Three.js type definitions</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-break"></div>
+
+        <!-- Component Architecture -->
+        <h2>🏗️ Component Architecture</h2>
+
+        <h3>Layout Components</h3>
+        <div class="feature-list">
+            <div class="feature-item">
+                <strong>Header</strong>
+                Fixed navigation with frosted glass effect and scroll-aware transparency
+            </div>
+            <div class="feature-item">
+                <strong>Footer</strong>
+                Centered footer section for contact and navigation
+            </div>
+            <div class="feature-item">
+                <strong>SmoothScrollProvider</strong>
+                App-wide Lenis integration for smooth scrolling
+            </div>
+        </div>
+
+        <h3>Page Sections (10+ Interactive Sections)</h3>
+        <div class="feature-list">
+            <div class="feature-item">
+                <strong>HeroSection</strong>
+                Split-screen layout, animated name, stats counter, particle canvas
+            </div>
+            <div class="feature-item">
+                <strong>AboutSection</strong>
+                Two-column layout with photo and interest pills
+            </div>
+            <div class="feature-item">
+                <strong>AcademicSection</strong>
+                Scroll flip reveal title, grade table display
+            </div>
+            <div class="feature-item">
+                <strong>ClubsSection</strong>
+                Scroll flip reveal, 2-column club cards
+            </div>
+            <div class="feature-item">
+                <strong>CompetitionsSection</strong>
+                Scroll flip reveal title, vertical timeline
+            </div>
+            <div class="feature-item">
+                <strong>ProjectsSection</strong>
+                Dark inset cards, scroll flip reveal, 3D flip card grid
+            </div>
+            <div class="feature-item">
+                <strong>SkillsSection</strong>
+                Scroll flip reveal, 3-column skill cards with progress bars
+            </div>
+            <div class="feature-item">
+                <strong>CertificatesSection</strong>
+                Scroll flip reveal, smooth scroll gallery
+            </div>
+            <div class="feature-item">
+                <strong>BlogSection</strong>
+                Scroll flip reveal, 3-column blog cards
+            </div>
+            <div class="feature-item">
+                <strong>TestimonialsSection</strong>
+                Scroll flip reveal, 2-column testimonial cards
+            </div>
+            <div class="feature-item">
+                <strong>ContactSection</strong>
+                Two-column layout with contact info and form
+            </div>
+        </div>
+
+        <h3>Reusable Components (15+ Custom)</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Component</th>
+                    <th>Used In</th>
+                    <th>Technology</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ParticleCanvas</td>
+                    <td>HeroSection</td>
+                    <td>React Three Fiber + Physics</td>
+                </tr>
+                <tr>
+                    <td>ScrollFlipReveal</td>
+                    <td>Academic, Clubs, Competitions, Projects, Skills, Certificates, Blog, Testimonials</td>
+                    <td>GSAP + SplitText</td>
+                </tr>
+                <tr>
+                    <td>FlipCard</td>
+                    <td>ProjectsSection</td>
+                    <td>CSS 3D Transforms</td>
+                </tr>
+                <tr>
+                    <td>SmoothScrollGallery</td>
+                    <td>CertificatesSection</td>
+                    <td>GSAP + Draggable</td>
+                </tr>
+                <tr>
+                    <td>SectionOverline</td>
+                    <td>All Sections</td>
+                    <td>Custom React Component</td>
+                </tr>
+                <tr>
+                    <td>SectionHeading</td>
+                    <td>All Sections</td>
+                    <td>Custom React Component</td>
+                </tr>
+                <tr>
+                    <td>StatCounter</td>
+                    <td>HeroSection</td>
+                    <td>GSAP Animation</td>
+                </tr>
+                <tr>
+                    <td>PillBadge</td>
+                    <td>About, Competitions, Skills</td>
+                    <td>Custom React Component</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="page-break"></div>
+
+        <!-- Animations -->
+        <h2>✨ Animation Implementation</h2>
+
+        <h3>Key Animations</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Animation</th>
+                    <th>Library</th>
+                    <th>Complexity</th>
+                    <th>Technique</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hero Name Entrance</td>
+                    <td>GSAP</td>
+                    <td>Medium</td>
+                    <td>translateY(100%)→0 with overflow:hidden clip, staggered lines</td>
+                </tr>
+                <tr>
+                    <td>Stats Counter</td>
+                    <td>GSAP</td>
+                    <td>Low</td>
+                    <td>Snap effect for counting animation</td>
+                </tr>
+                <tr>
+                    <td>Particle Simulation</td>
+                    <td>R3F + Physics</td>
+                    <td>High</td>
+                    <td>55 instanced spheres with Cannon.js physics</td>
+                </tr>
+                <tr>
+                    <td>Scroll Flip Reveal</td>
+                    <td>GSAP + SplitText</td>
+                    <td>High</td>
+                    <td>Character-level 3D rotation from rotateY(-80°) to 0</td>
+                </tr>
+                <tr>
+                    <td>CSS 3D Flip Cards</td>
+                    <td>Pure CSS</td>
+                    <td>Medium</td>
+                    <td>perspective + preserve-3d, rotateY(180deg) on hover</td>
+                </tr>
+                <tr>
+                    <td>Smooth Scroll Gallery</td>
+                    <td>GSAP + Draggable</td>
+                    <td>High</td>
+                    <td>Drag-based horizontal scroll with quickTo interpolation</td>
+                </tr>
+                <tr>
+                    <td>Section Entrance</td>
+                    <td>GSAP + ScrollTrigger</td>
+                    <td>Low</td>
+                    <td>translateY(30px)→0, opacity 0→1, staggered</td>
+                </tr>
+                <tr>
+                    <td>Header Scroll Transition</td>
+                    <td>CSS</td>
+                    <td>Low</td>
+                    <td>backdrop-filter and border toggle at 100vh</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="highlight">
+            <strong>⚠️ Note on GSAP Premium Plugins:</strong> SplitText, Draggable, and InertiaPlugin require GSAP Club membership. Fallbacks using open-source alternatives (custom character splitting, manual velocity-based drag) are recommended for production without membership.
+        </div>
+
+        <div class="page-break"></div>
+
+        <!-- Project Metrics -->
+        <h2>📊 Project Metrics</h2>
+
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">10+</div>
+                <div class="metric-label">Interactive Sections</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">15+</div>
+                <div class="metric-label">Custom Components</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">8+</div>
+                <div class="metric-label">Animation Types</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">25+</div>
+                <div class="metric-label">Radix UI Components</div>
+            </div>
+        </div>
+
+        <!-- Project Structure -->
+        <h2>📁 Project Structure</h2>
+        <div class="section">
+            <pre style="background: #f5f5f5; padding: 15px; border-radius: 4px; overflow-x: auto;"><code>portfolio/
+├── app/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── ScrollFlipReveal.tsx
+│   │   │   └── ui/ (25+ Radix UI components)
+│   │   ├── hooks/
+│   │   │   ├── use-mobile.ts
+│   │   │   └── useSmoothScroll.tsx
+│   │   ├── lib/
+│   │   │   └── utils.ts
+│   │   ├── pages/
+│   │   │   └── Home.tsx
+│   │   ├── sections/ (11 section components)
+│   │   ├── App.tsx
+│   │   ├── App.css
+│   │   ├── main.tsx
+│   │   └── index.css
+│   ├── public/
+│   ├── package.json
+│   ├── vite.config.ts
+│   ├── tsconfig.json
+│   ├── tailwind.config.js
+│   └── eslint.config.js
+└── tech-spec.md</code></pre>
+        </div>
+
+        <!-- Key Features -->
+        <h2>🎯 Key Features & Highlights</h2>
+
+        <h3>Interactive Animations</h3>
+        <ul>
+            <li><strong>Scroll-Triggered Effects:</strong> Animations linked to scroll position using GSAP ScrollTrigger</li>
+            <li><strong>3D Particle System:</strong> Physics-based particle simulation in hero section</li>
+            <li><strong>Character-Level Text Animation:</strong> Individual character rotation with flip effect</li>
+            <li><strong>Smooth Scrolling:</strong> Lenis integration for enhanced scroll experience</li>
+            <li><strong>Drag Interactions:</strong> Gallery support for drag-based navigation</li>
+        </ul>
+
+        <h3>Modern Web Technologies</h3>
+        <ul>
+            <li><strong>React 19:</strong> Latest React features and improvements</li>
+            <li><strong>TypeScript:</strong> Full type safety throughout the application</li>
+            <li><strong>Vite:</strong> Ultra-fast build tool with instant HMR</li>
+            <li><strong>Tailwind CSS:</strong> Utility-first CSS with custom configuration</li>
+            <li><strong>Radix UI:</strong> Accessible, unstyled component primitives</li>
+        </ul>
+
+        <h3>Responsive Design</h3>
+        <ul>
+            <li>Mobile-first approach using Tailwind CSS</li>
+            <li>Flexible grid layouts for different screen sizes</li>
+            <li>Touch-friendly interactions for mobile devices</li>
+            <li>Performance optimized for all devices</li>
+        </ul>
+
+        <!-- Technical Decisions -->
+        <h2>🔍 Technical Decisions & Rationale</h2>
+
+        <h3>Why React 19 + TypeScript?</h3>
+        <p>React 19 provides the latest features and performance improvements, while TypeScript ensures type safety across a complex component hierarchy. This combination improves developer productivity and reduces runtime errors.</p>
+
+        <h3>Why Vite?</h3>
+        <p>Vite offers exceptional build performance with instant HMR, essential for rapid development iteration. The dev server startup is near-instantaneous, improving developer experience significantly.</p>
+
+        <h3>Why GSAP for Animations?</h3>
+        <p>GSAP is the industry-standard animation library with superior performance, ease of use, and ScrollTrigger plugin for scroll-linked animations. The learning curve is minimal for developers familiar with animation libraries.</p>
+
+        <h3>Why Three.js + React Three Fiber?</h3>
+        <p>Three.js provides robust 3D graphics capabilities, while React Three Fiber seamlessly integrates Three.js with React's component model. This approach provides better code organization and reusability compared to vanilla Three.js.</p>
+
+        <h3>Why Tailwind CSS?</h3>
+        <p>Tailwind's utility-first approach enables rapid development with consistency. Custom configuration supports the design system, and the small bundle size keeps the application lightweight.</p>
+
+        <!-- Interview Talking Points -->
+        <h2>💡 Interview Talking Points</h2>
+
+        <div class="section">
+            <h3>Animation Performance & Optimization</h3>
+            <p>Discuss how GSAP and ScrollTrigger are optimized for performance with GPU-accelerated transforms. Explain the approach to managing complex animations without impacting page responsiveness. Mention the use of will-change CSS properties and transform-based animations.</p>
+
+            <h3>3D Graphics & Physics Integration</h3>
+            <p>Explain the particle system implementation using Three.js, React Three Fiber, and Cannon.js. Discuss challenges in managing 3D graphics within a React application and how React Three Fiber solves these problems.</p>
+
+            <h3>Responsive Design at Scale</h3>
+            <p>Address how the portfolio handles animations and complex layouts across different screen sizes. Explain the mobile-first approach and the use of Tailwind's responsive utilities.</p>
+
+            <h3>TypeScript Benefits</h3>
+            <p>Highlight how TypeScript catches errors during development, improves IDE autocomplete for complex animation APIs, and makes refactoring safer when managing intricate component hierarchies.</p>
+
+            <h3>Component Reusability</h3>
+            <p>Discuss the creation of reusable animated components (ScrollFlipReveal, StatCounter, ParticleCanvas) and how they reduce code duplication across the 10+ sections.</p>
+
+            <h3>Accessibility & User Experience</h3>
+            <p>Mention the use of Radix UI for accessible component primitives. Discuss considerations for animations and how they enhance rather than hinder the user experience.</p>
+
+            <h3>Build Tool Selection</h3>
+            <p>Explain why Vite was chosen over alternatives like Webpack or Create React App. Discuss the developer experience improvements and faster build times.</p>
+
+            <h3>Smooth Scrolling & Performance</h3>
+            <p>Discuss the Lenis library for smooth scrolling and how it works alongside scroll-triggered animations without impacting performance.</p>
+        </div>
+
+        <!-- Conclusion -->
+        <h2>🎓 Conclusion</h2>
+        <div class="section">
+            <p>This portfolio project demonstrates modern web development practices with a focus on interactive design, performance optimization, and code quality. It showcases expertise in React, TypeScript, advanced CSS techniques, 3D graphics, and complex animations. The project serves as both a personal portfolio and a technical showcase of skills in building engaging, high-performance web applications.</p>
+            
+            <p>The combination of cutting-edge technologies (React 19, Vite, Three.js) with industry-standard animation libraries (GSAP) results in a visually stunning and performant application that effectively communicates technical capabilities to potential employers and collaborators.</p>
+        </div>
+
+        <div class="footer">
+            <p>Project Documentation • Generated on 2026-06-15</p>
+            <p>Technology Stack: React 19 | TypeScript | Vite | GSAP | Three.js | Tailwind CSS</p>
+        </div>
+    </div>
+</body>
+</html>
